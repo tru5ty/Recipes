@@ -16,6 +16,7 @@
 		23CA1B7D1BFEA3E900CB302C /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CA1B7B1BFEA3E900CB302C /* Recipe+CoreDataProperties.swift */; };
 		23CA1B7E1BFEA3E900CB302C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CA1B7C1BFEA3E900CB302C /* Recipe.swift */; };
 		23CA1B801BFEA58900CB302C /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CA1B7F1BFEA58900CB302C /* RecipeCell.swift */; };
+		A785A8D11C0555BF0095AE33 /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785A8D01C0555BF0095AE33 /* CreateRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		23CA1B7B1BFEA3E900CB302C /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		23CA1B7C1BFEA3E900CB302C /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
 		23CA1B7F1BFEA58900CB302C /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		A785A8D01C0555BF0095AE33 /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				23CA1B651BFE9D6D00CB302C /* ViewController.swift */,
+				A785A8D01C0555BF0095AE33 /* CreateRecipeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				23CA1B7D1BFEA3E900CB302C /* Recipe+CoreDataProperties.swift in Sources */,
 				23CA1B641BFE9D6D00CB302C /* AppDelegate.swift in Sources */,
 				23CA1B801BFEA58900CB302C /* RecipeCell.swift in Sources */,
+				A785A8D11C0555BF0095AE33 /* CreateRecipeVC.swift in Sources */,
 				23CA1B6C1BFE9D6D00CB302C /* recipez.xcdatamodeld in Sources */,
 				23CA1B7E1BFEA3E900CB302C /* Recipe.swift in Sources */,
 			);
@@ -327,6 +331,7 @@
 				23CA1B771BFE9D6D00CB302C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

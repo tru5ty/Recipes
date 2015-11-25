@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-Kb-lta">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-Kb-lta">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,14 +27,14 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bDD-H6-sxn" id="I75-5b-oVz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="102"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pR-cK-sHc">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pR-cK-sHc">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="102"/>
                                                     <animations/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mum's Lemon Merange Pie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nah-Li-YHb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mum's Lemon Merange Pie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nah-Li-YHb">
                                                     <rect key="frame" x="7" y="40" width="585" height="21"/>
                                                     <animations/>
                                                     <constraints>
@@ -61,7 +61,6 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="img" destination="1pR-cK-sHc" id="iK9-lA-3Jz"/>
                                             <outlet property="recipeImg" destination="1pR-cK-sHc" id="5lY-rq-44y"/>
                                             <outlet property="recipeTitle" destination="Nah-Li-YHb" id="mre-IN-bqd"/>
                                         </connections>
@@ -94,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="1057" y="312"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="lgh-Pt-mfT">
             <objects>
-                <viewController id="deW-35-UtD" sceneMemberID="viewController">
+                <viewController id="deW-35-UtD" customClass="CreateRecipeVC" customModule="recipez" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bZ2-V4-vPj"/>
                         <viewControllerLayoutGuide type="bottom" id="BK3-Oc-BS2"/>
@@ -124,7 +123,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dd7-P5-CxW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pie" translatesAutoresizingMaskIntoConstraints="NO" id="dd7-P5-CxW">
                                 <rect key="frame" x="180" y="270" width="240" height="240"/>
                                 <animations/>
                                 <constraints>
@@ -134,6 +133,17 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="tkt-RA-W6t"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyt-xN-fHN">
+                                <rect key="frame" x="252" y="534" width="96" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="OFF-GT-MSH"/>
+                                </constraints>
+                                <state key="normal" title="Save Recipe"/>
+                                <connections>
+                                    <action selector="createRecipe:" destination="deW-35-UtD" eventType="touchUpInside" id="Q3k-6Y-csk"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AJ-Mc-piR">
                                 <rect key="frame" x="180" y="270" width="240" height="240"/>
                                 <animations/>
@@ -144,14 +154,9 @@
                                 <state key="normal" title="Add Image">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyt-xN-fHN">
-                                <rect key="frame" x="252" y="534" width="96" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="OFF-GT-MSH"/>
-                                </constraints>
-                                <state key="normal" title="Create Button"/>
+                                <connections>
+                                    <action selector="addImage:" destination="deW-35-UtD" eventType="touchUpInside" id="hH2-6u-WZ8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -177,6 +182,12 @@
                             <constraint firstItem="5QR-ix-ZyJ" firstAttribute="top" secondItem="BzA-LX-psG" secondAttribute="bottom" constant="21" id="ftq-0I-CVs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recipeImg" destination="dd7-P5-CxW" id="TLk-F4-GnJ"/>
+                        <outlet property="recipeIngredients" destination="5QR-ix-ZyJ" id="I4z-eJ-JVv"/>
+                        <outlet property="recipeSteps" destination="4MS-Yn-PxE" id="Wyi-pe-cc2"/>
+                        <outlet property="recipeTitle" destination="BzA-LX-psG" id="m1F-wk-8z2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL6-BK-Nqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,4 +214,7 @@
             <point key="canvasLocation" x="261" y="-380"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pie" width="277" height="182"/>
+    </resources>
 </document>
